@@ -53,6 +53,7 @@ The database is designed to efficiently manage and relate various entities withi
    - **Fields**: ID, Name, Situation
    - **Description**: Categorizes the definitions in the `define` table (e.g., faculty, department, term).
 
+
 ### Entity Relationships
 
 - **Student ↔ Faculty/Department**: Many-to-One relationship.
@@ -60,6 +61,8 @@ The database is designed to efficiently manage and relate various entities withi
 - **Course ↔ Teacher/Department/Faculty/Term/Coursestatus**: Many-to-One relationship.
 - **CourseSelection ↔ Student/Course**: Many-to-One relationship.
 - **Define ↔ DefineType**: Many-to-One relationship.
+
+![college](https://github.com/user-attachments/assets/49285862-5ecc-49ed-89ec-62610aea2e45)
 
 # Project Structure
 
