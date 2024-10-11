@@ -61,3 +61,88 @@ The database is designed to efficiently manage and relate various entities withi
 - **CourseSelection ↔ Student/Course**: Many-to-One relationship.
 - **Define ↔ DefineType**: Many-to-One relationship.
 
+# Project Structure
+
+```plaintext
+com.college
+├── controller
+│   ├── CourseController.java
+│   ├── CourseSelectionController.java
+│   ├── DefineController.java
+│   ├── DefineTypeController.java
+│   ├── StudentController.java
+│   └── TeacherController.java
+├── entity
+│   ├── Course.java
+│   ├── CourseSelection.java
+│   ├── Define.java
+│   ├── DefineType.java
+│   ├── Student.java
+│   └── Teacher.java
+├── repository
+│   ├── CourseRepository.java
+│   ├── CourseSelectionRepository.java
+│   ├── DefineRepository.java
+│   ├── DefineTypeRepository.java
+│   ├── StudentRepository.java
+│   └── TeacherRepository.java
+├── service
+│   ├── CourseService.java
+│   ├── CourseSelectionService.java
+│   ├── DefineService.java
+│   ├── DefineTypeService.java
+│   ├── StudentService.java
+│   └── TeacherService.java
+└── CollegeManagementSystemApplication.java
+
+
+## Getting Started
+
+### Prerequisites
+
+- **Java Development Kit (JDK) 17 or higher**
+- **Maven**: For building the project.
+- **MariaDB/MySQL**: For the database.
+
+### Installation Steps
+
+#### 1. Clone the Repository
+
+```bash
+git clone https://github.com/yourusername/college-management-system.git
+cd college-management-system
+
+#### 2. Set Up the Database
+Import the provided SQL dump (college.sql) into your MariaDB/MySQL server:
+```bash
+mysql -u root -p -h localhost -P 3307 < college.sql
+
+#### 3. Configure Application Properties
+Update the src/main/resources/application.properties file with your database credentials:
+```bash
+# Database Configuration
+spring.datasource.url=jdbc:mysql://localhost:3307/universitysystem?useSSL=false&serverTimezone=UTC
+spring.datasource.username=root
+spring.datasource.password=your_password
+
+# JPA / Hibernate Settings
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL8Dialect
+
+# Naming Strategy to preserve column names
+spring.jpa.hibernate.naming.physical-strategy=org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+
+
+
+#### 4. Build and Run the Project
+Use Maven to build the project and run it:
+```bash
+mvn clean install
+mvn spring-boot:run
+
+#### 5. Access the API
+The application will run on http://localhost:8080.
+
+
+
