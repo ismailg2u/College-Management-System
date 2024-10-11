@@ -94,7 +94,7 @@ com.college
 │   ├── StudentService.java
 │   └── TeacherService.java
 └── CollegeManagementSystemApplication.java
-
+```plaintext
 
 ## Getting Started
 
