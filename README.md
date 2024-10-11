@@ -94,7 +94,7 @@ com.college
 │   ├── StudentService.java
 │   └── TeacherService.java
 └── CollegeManagementSystemApplication.java
-```plaintext
+```
 
 ## Getting Started
 
@@ -111,12 +111,13 @@ com.college
 ```bash
 git clone https://github.com/yourusername/college-management-system.git
 cd college-management-system
+```
 
 #### 2. Set Up the Database
 Import the provided SQL dump (college.sql) into your MariaDB/MySQL server:
 ```bash
 mysql -u root -p -h localhost -P 3307 < college.sql
-
+```
 #### 3. Configure Application Properties
 Update the src/main/resources/application.properties file with your database credentials:
 ```bash
@@ -132,7 +133,7 @@ spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL8Dialect
 
 # Naming Strategy to preserve column names
 spring.jpa.hibernate.naming.physical-strategy=org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
-
+```
 
 
 #### 4. Build and Run the Project
@@ -140,7 +141,7 @@ Use Maven to build the project and run it:
 ```bash
 mvn clean install
 mvn spring-boot:run
-
+```
 #### 5. Access the API
 The application will run on http://localhost:8080.
 
